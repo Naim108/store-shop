@@ -10,6 +10,7 @@ const showProducts = (products) => {
   for (const product of allProducts) {
     // console.log(product)
     const image = product.image;
+    const rating=product.rating.rate;
     const div = document.createElement("div");
     div.classList.add("product");
     div.innerHTML = `
@@ -21,7 +22,7 @@ const showProducts = (products) => {
       <h4 class="mt-2">${product.title.slice(0,25)}</h4>
       <p class="mt-2">Category: ${product.category}</p>
       <h6 class="mt-2">Price: $ ${product.price}</h6>
-      <p class="text-start"><i class="fas star-color fa-star"></i><i class="fas star-color fa-star"></i><i class="fas star-color fa-star"></i><i class="fas star-color fa-star"></i><i class="fas star-color fa-star-half-alt"></i>  ${product.rating.rate}(${product.rating.count})</p>
+      <p class="text-start"><i class="fas star-color fa-star"></i><i class="fas star-color fa-star"></i><i class="fas star-color fa-star"></i><i class="fas star-color fa-star"></i><i class="fas star-color fa-star-half-alt"></i>  ${rating}(${product.rating.count})</p>
       </div>
       <div class="card-footer bg-white">
       <div class="row">
@@ -38,6 +39,8 @@ const showProducts = (products) => {
     document.getElementById("all-products").appendChild(div);
   }
 };
+
+// add product
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;

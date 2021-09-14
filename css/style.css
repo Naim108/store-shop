@@ -73,6 +73,7 @@ body {
   font-weight: 450;
   font-size: 16px;
   padding: 8px;
+  margin-left: -35px
 }
 #details-btn{
   border: 1px solid #e67e22;
@@ -80,6 +81,7 @@ body {
   font-weight: 450;
   font-size: 16px;
   padding: 8px 20px 8px 20px;
+  margin-left: -5px;
 }
 
 @media only screen and (max-width: 768px) {
